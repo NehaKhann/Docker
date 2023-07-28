@@ -1,0 +1,39 @@
+***27 july 2023 Learnings***
+What is Docker
+Dockerfile, image, containers
+Installation
+Refer to https://hub.docker.com/ 
+docker pull <image name> 
+docker run <image name>
+docker ps ..list all containers running
+docker ps -a ..list all containers that have run or either running
+docker search <image name>
+docker run --name <name of your choice> -d <image name> .... -d means detached .. run image in detached mode
+docker run --name <name of your choice> -it -d <image name> .... -d means detached and -it means interactive
+docker exec -it <container id> <command name> .. you will be able to execute python programming
+for eg ... docker exec -it 432fab9b4daf python3
+docker inspect <name of image>
+docker run --name mySqlDb -e MYSQL_ROOT_PASSWORD=root -d mysql
+docker exec -it mySqlDb bash
+mysql -p
+docker run --name nginxContainer -d -p 8080:80 nginx .. go to localhost:8080 in your browser now
+docker pull httpd
+docker run --name httpdServer -d -p 8081:80 httpd
+docker stop <container id or name> ... will remove from docker ps
+docker restart <container id or name> 
+docker rm <container id or name> ... will remove from docker ps -a
+docker rmi <image name> ... will remove from docker images
+... docker hub ...
+	docker login
+	docker commit 
+	docker push
+docker copy 
+docker logs <container name>
+docker logout .. logout from docker hub
+
+VS Code
+1. create dockerfile
+2. docker build -t <name of your choice for image> .
+... t is for tagging
+
+
