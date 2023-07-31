@@ -37,3 +37,8 @@ VS Code
 ... t is for tagging
 
 
+//Storage
+docker run -v C:/Users/Neha/Desktop/Docker/Volume-Bind-Mount/test:/app --name apache -it -d -p 8080:80 httpd:latest
+docker exec -it 83 /bin/bash
+
+
